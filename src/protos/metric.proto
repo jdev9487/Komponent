@@ -8,8 +8,10 @@ service MetricService {
 
 message GetChristoffelMatrixRequest {
   repeated string variables = 1;
+  repeated string diagonals = 2;
+  int32 matrix_identifier = 3;
 }
 
 message GetChristoffelMatrixResponse {
-  string message = 1;
+  string matrix = 1;
 }

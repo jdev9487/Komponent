@@ -14,7 +14,7 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x0cmetric.proto\x12\rMetricService\"0\n\x1bGetChristoffelMatrixRequest\x12\x11\n\tvariables\x18\x01 \x03(\t\"/\n\x1cGetChristoffelMatrixResponse\x12\x0f\n\x07message\x18\x01 \x01(\t2\x82\x01\n\rMetricService\x12q\n\x14GetChristoffelMatrix\x12*.MetricService.GetChristoffelMatrixRequest\x1a+.MetricService.GetChristoffelMatrixResponse\"\x00\x62\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x0cmetric.proto\x12\rMetricService\"^\n\x1bGetChristoffelMatrixRequest\x12\x11\n\tvariables\x18\x01 \x03(\t\x12\x11\n\tdiagonals\x18\x02 \x03(\t\x12\x19\n\x11matrix_identifier\x18\x03 \x01(\x05\".\n\x1cGetChristoffelMatrixResponse\x12\x0e\n\x06matrix\x18\x01 \x01(\t2\x82\x01\n\rMetricService\x12q\n\x14GetChristoffelMatrix\x12*.MetricService.GetChristoffelMatrixRequest\x1a+.MetricService.GetChristoffelMatrixResponse\"\x00\x62\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
@@ -22,9 +22,9 @@ _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'metric_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
   DESCRIPTOR._options = None
   _globals['_GETCHRISTOFFELMATRIXREQUEST']._serialized_start=31
-  _globals['_GETCHRISTOFFELMATRIXREQUEST']._serialized_end=79
-  _globals['_GETCHRISTOFFELMATRIXRESPONSE']._serialized_start=81
-  _globals['_GETCHRISTOFFELMATRIXRESPONSE']._serialized_end=128
-  _globals['_METRICSERVICE']._serialized_start=131
-  _globals['_METRICSERVICE']._serialized_end=261
+  _globals['_GETCHRISTOFFELMATRIXREQUEST']._serialized_end=125
+  _globals['_GETCHRISTOFFELMATRIXRESPONSE']._serialized_start=127
+  _globals['_GETCHRISTOFFELMATRIXRESPONSE']._serialized_end=173
+  _globals['_METRICSERVICE']._serialized_start=176
+  _globals['_METRICSERVICE']._serialized_end=306
 # @@protoc_insertion_point(module_scope)
