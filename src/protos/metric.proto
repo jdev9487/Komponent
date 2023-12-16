@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package MetricService;
+
+service MetricService {
+  rpc GetChristoffelMatrix (GetChristoffelMatrixRequest) returns (GetChristoffelMatrixResponse) {}
+}
+
+message GetChristoffelMatrixRequest {
+  repeated string variables = 1;
+}
+
+message GetChristoffelMatrixResponse {
+  string message = 1;
+}
