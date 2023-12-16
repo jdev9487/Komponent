@@ -21,7 +21,6 @@ class MetricService(metric_pb2_grpc.MetricServiceServicer):
         metric.setMatrixRep(rep)
         matrix = metric.get_christoffel_matrix(request.matrix_identifier)
         pretty = sp.latex(matrix)
-        print(pretty)
 
         return metric_pb2.GetChristoffelMatrixResponse(matrix=pretty)
     
