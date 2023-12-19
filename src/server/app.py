@@ -13,7 +13,7 @@ CORS(app)
 def christoffel():
     body = request.json
     metricVars = []
-    for var in body["variables"]:
+    for var in body["coordinates"]:
         metricVars.append(sp.Symbol(var))
     metric = m.Metric(metricVars)
     diagonalEntries = []
@@ -21,8 +21,11 @@ def christoffel():
         diagonalEntries.append(l.parse_latex(diag))
     rep = sp.diag(*diagonalEntries)
     metric.setMatrixRep(rep)
-    matrix = metric.get_christoffel_matrix(body["matrix_identifier"])
-    pretty = sp.latex(matrix)
-    resp = Response(pretty, mimetype='text/plain')
+    result = ""
+    for i in range(len(metricVars)):
+        matrix = metric.get_christoffel_matrix(i)
+        pretty = sp.latex(matrix)
+        result += r"\Gamma^{" + sp.latex(metricVars[i]) + r"}_{\mu\nu}=" + pretty
+    resp = Response(result, mimetype='text/plain')
     resp.headers['Access-Control-Allow-Origin'] = '*'
     return resp
