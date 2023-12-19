@@ -3,7 +3,7 @@ import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
 import { MathJax } from "better-react-mathjax";
 
-function Two(props) {
+function Four(props) {
   const {
     coordinates,
     setCoordinates,
@@ -29,7 +29,7 @@ function Two(props) {
   }
   return (
     <Box>
-      <Box sx={{display: 'flex', alignItems: 'flex-end'}}>
+      <Box sx={{ display: 'flex', alignItems: 'flex-end' }}>
         <Typography variant="h5" gutterBottom>
           Coordinates: 
         </Typography>
@@ -55,9 +55,23 @@ function Two(props) {
             value={coordinates[1]}
             variant="standard"
             onChange={(e) => handleCoordinateChange(1, e)} />
+          <TextField
+            key="coord3"
+            id="coord3"
+            label="3"
+            value={coordinates[2]}
+            variant="standard"
+            onChange={(e) => handleCoordinateChange(2, e)} />
+          <TextField
+            key="coord4"
+            id="coord4"
+            label="4"
+            value={coordinates[3]}
+            variant="standard"
+            onChange={(e) => handleCoordinateChange(3, e)} />
         </Box>
       </Box>
-      <Box sx={{display: 'flex', alignItems: 'flex-end'}}>
+      <Box sx={{ display: 'flex', alignItems: 'flex-end' }}>
         <Typography variant="h5" gutterBottom>
           Diagonals: 
         </Typography>
@@ -83,13 +97,27 @@ function Two(props) {
             value={diagonals[1]}
             variant="standard"
             onChange={(e) => handleDiagonalChange(1, e)} />
+          <TextField
+            key="diag3"
+            id="diag3"
+            label="3,3"
+            value={diagonals[2]}
+            variant="standard"
+            onChange={(e) => handleDiagonalChange(2, e)} />
+          <TextField
+            key="diag4"
+            id="diag4"
+            label="4,4"
+            value={diagonals[3]}
+            variant="standard"
+            onChange={(e) => handleDiagonalChange(3, e)} />
         </Box>
       </Box>
       <MathJax>
-        {String.raw`$$\huge${latex}$$`}
+        {String.raw`$$${latex}$$`}
       </MathJax>
     </Box>
   )
 }
 
-export default Two;
+export default Four;

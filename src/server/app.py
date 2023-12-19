@@ -21,11 +21,12 @@ def christoffel():
         diagonalEntries.append(l.parse_latex(diag))
     rep = sp.diag(*diagonalEntries)
     metric.setMatrixRep(rep)
-    result = ""
+    result = "\\begin{align*}"
     for i in range(len(metricVars)):
         matrix = metric.get_christoffel_matrix(i)
         pretty = sp.latex(matrix)
-        result += r"\Gamma^{" + sp.latex(metricVars[i]) + r"}_{\mu\nu}=" + pretty
+        result += r"\Gamma^{" + sp.latex(metricVars[i]) + r"}_{\mu\nu}&=" + pretty + "\\\\"
+    result += "\\end{align*}"
     resp = Response(result, mimetype='text/plain')
     resp.headers['Access-Control-Allow-Origin'] = '*'
     return resp
