@@ -24,4 +24,4 @@ jobs:
         with:
           context: src/client
           push: true
-          tags: jdef9487/komponent-client:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/komponent-client:latest
