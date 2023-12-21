@@ -4,6 +4,6 @@ services:
     ports:
       - "5003:80"
   server:
-    image: server
+    image: jdev9487/komponent-server:latest
     ports:
       - "5098:5011"

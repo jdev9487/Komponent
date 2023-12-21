@@ -23,6 +23,7 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: src/client
+          platforms: macOS/amd64
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/komponent-client:latest
       -
@@ -30,5 +31,6 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: src/server
+          platforms: macOS/amd64
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/komponent-server:latest
