@@ -1,0 +1,9 @@
+services:
+  client:
+    image: client
+    ports:
+      - "5003:80"
+  server:
+    image: server
+    ports:
+      - "5098:5011"

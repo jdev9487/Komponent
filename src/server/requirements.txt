@@ -1,0 +1,5 @@
+sympy==1.12
+Flask==3.0.0
+Flask-Cors==4.0.0
+antlr4-python3-runtime==4.11.0
+gunicorn==21.2.0

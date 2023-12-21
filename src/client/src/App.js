@@ -20,7 +20,7 @@ function App() {
   const [diagonals3, setDiagonals3] = useState(["", "", ""]);
   const [coordinates4, setCoordinates4] = useState(["", "", "", ""]);
   const [diagonals4, setDiagonals4] = useState(["", "", "", ""]);
-  const url = 'http://localhost:8000/christoffel';
+  const url = `http://${process.env.REACT_APP_CHRISTOFFEL_URL}/christoffel`
   const handleDimensionChange = (e) => {
     setDimension(parseInt(e.target.value))
   }

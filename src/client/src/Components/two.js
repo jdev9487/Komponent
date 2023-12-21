@@ -85,7 +85,7 @@ function Two(props) {
             onChange={(e) => handleDiagonalChange(1, e)} />
         </Box>
       </Box>
-      <MathJax>
+      <MathJax dynamic>
         {String.raw`$$\huge${latex}$$`}
       </MathJax>
     </Box>

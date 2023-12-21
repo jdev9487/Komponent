@@ -99,7 +99,7 @@ function Three(props) {
             onChange={(e) => handleDiagonalChange(2, e)} />
         </Box>
       </Box>
-      <MathJax>
+      <MathJax dynamic>
         {String.raw`$$${latex}$$`}
       </MathJax>
     </Box>
