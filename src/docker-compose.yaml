@@ -1,6 +1,6 @@
 services:
   client:
-    image: client
+    image: jdev9487/komponent-client:latest
     ports:
       - "5003:80"
   server:
