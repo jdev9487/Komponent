@@ -12,9 +12,9 @@ jobs:
 	  matrix:
 		include:
 		  - image: jdev9487/komponent-client
-		    dockerfile: ../client
+		    dockerfile: src/client
 		  - image: jdev9487/komponent-server
-		    dockerfile: ../server
+		    dockerfile: src/server
     steps:
       -
         name: Checkout
